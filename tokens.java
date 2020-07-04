@@ -8,11 +8,16 @@ class tokens{
         char senArr[]=sentence.toCharArray();
         for(int i=0;i<sentence.length();i++){
             if(senArr[i]==' ' || senArr[i]=='!' || senArr[i]==',' || senArr[i]=='?' || senArr[i]=='.' || senArr[i]=='_' || senArr[i]=='\'' || senArr[i]=='@'){
-                if(i-j!=1){
+                if(i-j!=1 && i!=0){
                     senArr[i]='%';
                     j=i;
                 }
+                else if(i==0){
+                    j=i;
+                    continue;
+                }
                 else{
+                    j=i;
                     continue;
                 }
             }
