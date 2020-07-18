@@ -6,11 +6,15 @@ class pattern_checker{
         int test=sr.nextInt();
         sr.nextLine();
         for(int i=0;i<test;i++){
-            String regex=sr.nextLine();
-            Pattern pattern= Pattern.compile(regex);
-            //if(pattern==null){System.out.println("false");}
-            boolean m=pattern.matcher(regex).matches();
-            System.out.println(m);
+            try{
+                String regex=sr.nextLine();
+                Pattern pattern= Pattern.compile(regex);
+                System.out.println("Valid");
+            }
+            catch(Exception e){
+                System.out.println("Invalid");
+            }
+            
         }
     }
 }
