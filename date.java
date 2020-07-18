@@ -4,11 +4,11 @@ class date{
         Scanner sr=new Scanner(System.in);
         String input=sr.nextLine();
         String para[]=input.split(" ");
-        int date=Integer.valueOf(para[0]);
-        int month=Integer.valueOf(para[1]);
+        int date=Integer.valueOf(para[1]);
+        int month=Integer.valueOf(para[0]);
         int year=Integer.valueOf(para[2]);
         Calendar calendar=Calendar.getInstance();
-        calendar.set(year,month+1,date);
+        calendar.set(year,month-1,date);
         int day=calendar.get(Calendar.DAY_OF_WEEK);
         switch(day){
             case 1:
